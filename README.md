@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🍽️ The Ivory Platter - Restaurant POS System
 
 A modern, responsive Point of Sale (POS) interface built for restaurant management. This application allows users to browse a menu, filter by category, search globally for items, and manage a dynamic shopping cart.
@@ -25,16 +24,15 @@ A modern, responsive Point of Sale (POS) interface built for restaurant manageme
 
 ## 📸 Screenshots
 
+<img width="1842" height="859" alt="image" src="https://github.com/user-attachments/assets/4c4a964e-956b-4366-b77a-2c06f708021b" />
 
 
 ## 📦 How to Run
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/safeaqah08/restaurant-pos-system.git](https://github.com/safeaqah08/restaurant-pos-system.git)
+    git clone https://github.com/safeaqah08/restaurant-pos-system.git
     ```
 2.  Open `index.html` in your browser.
 
-=======
-# restaurant-pos-system
->>>>>>> 088fdebd667efe3ba0d03f441178ed567ca3cb39
+
