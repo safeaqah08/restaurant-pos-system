@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant POS System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <main class="menu-section">
+            <header>
+                <div class="logo">
+                    <i class="ph-fill ph-circles-four" style="color: var(--primary);"></i>
+                    <h1>The Ivory Platter</h1>
+                </div>
+                <div class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Find food or beverages...">
+                </div>
+            </header>
+
+            <!-- <div class="section-title">
+                <h2>Special Discount Today</h2>
+                <span class="timer">Ends in <span class="red-text">12:10:09</span></span>
+            </div>
+            
+            <div class="discount-container" id="discountContainer">
+                </div> -->
+
+            <div class="section-title">
+                <h2>Explore Our Best Menu</h2>
+            </div>
+            <div class="categories" id="categoryList">
+                <button class="cat-btn active" data-cat="Miscellaneous"><i class="ph ph-squares-four"></i> All</button>
+                <button class="cat-btn" data-cat="Chicken"><i class="ph ph-hamburger"></i> Main Course</button>
+                <button class="cat-btn" data-cat="Starter"><i class="ph ph-bowl-food"></i> Appetizer</button>
+                <button class="cat-btn" data-cat="Dessert"><i class="ph ph-ice-cream"></i> Dessert</button>
+                <button class="cat-btn" data-cat="Side"><i class="ph ph-french-fries"></i> Side Dishes</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <div class="loading">Loading delicious food...</div>
+            </div>
+        </main>
+
+        <aside class="sidebar" id="desktopSidebar">
+            <div class="customer-info">
+                <h3>Customer Information</h3>
+                <div class="input-group">
+           
+                    <label>Customer Name</label>
+                    <input type="text" value="" class="clean-input">
+                </div>
+                <div class="input-group">
+                    <label>Table No.</label>
+                    <div class="stepper-input">
+                        <button onclick="updateTableNumber(-1)">-</button>
+                        <span id="tableNumber">12</span>
+                        <button class="dark" onclick="updateTableNumber(1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="current-order">
+                <br>
+                <h3>Current Order</h3>
+                <div class="cart-items" id="cartList">
+                    <div class="empty-state">Your cart is empty</div>
+                </div>
+            </div>
+
+            <div class="payment-summary">
+                <h3>Payment Summary</h3>
+                <br>
+                <div class="row"><span>Subtotal</span> <span id="subtotal">RM 0.00</span></div>
+                <div class="row"><span>Tax (6%)</span> <span id="tax">RM 0.00</span></div>
+                <div class="row total"><span>Total</span> <span id="total" class="green-text">RM 0.00</span></div>
+                
+                <button class="checkout-btn">Order Now</button>
+            </div>
+        </aside>
+    </div>
+
+    <div class="fab-container" id="mobileFab">
+        <button class="fab-btn" onclick="toggleMobileCart()">
+            <i class="ph-fill ph-shopping-cart"></i>
+            <span class="badge" id="cartCount">0</span>
+        </button>
+    </div>
+
+    <div class="mobile-cart-overlay" id="mobileCartOverlay">
+        <div class="mobile-cart-content">
+            <div class="cart-header">
+                <h3>Your Order</h3>
+                <button onclick="toggleMobileCart()"><i class="ph ph-x"></i></button>
+            </div>
+            <div id="mobileCartBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
